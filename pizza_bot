@@ -1,3 +1,6 @@
-# pizza bot program #
+# pizza bot program
+import random
+from random import randint
 
-names = ["Mark", "Pheobe", "Sally", "Michael"]
+# list of random names
+names = ["Mark", "Pheobe", "Sally", "Michael", "Denise", "Ellen", "Eris", "Moana", "Lewis", "Lara"]
