@@ -1,19 +1,11 @@
 # menu so that user can choose either pickup or delivery
-
-
 print("Is your order for pickup or delivery")
-
 print("For pickup please enter 1")
 print("For delivery please enter 2")
-
-
-low = 1
-high = 2
-
 while True:
     try:
         delivery = int(input("please enter a number "))
-        if delivery >= low and delivery <= high :
+        if delivery >= 1 and delivery <= 2 :
             if delivery == 1:
                 print("pickup")
                 break
