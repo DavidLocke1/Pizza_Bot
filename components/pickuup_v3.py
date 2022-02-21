@@ -1,9 +1,10 @@
+#Cutomer details dictionary
 customer_details = {}
 
 
 print("Please enter the pickup information")
 
-#customer name
+#customer name not blank
 valid = False
 while not valid:
     customer_details['name'] = input("Please enter your name ")
@@ -14,7 +15,7 @@ while not valid:
         print("Sorry this cannot be blank")
 
 
-#customer phone
+#customer phone not blank
 valid = False
 while not valid:
     customer_details['phone'] = input("Please enter your phone number ")
