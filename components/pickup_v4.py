@@ -1,7 +1,4 @@
 #Cutomer details dictionary
-from operator import not_
-
-
 customer_details = {}
 
 def not_blank(question):
