@@ -49,13 +49,11 @@ def order_type():
                     print("pickup")
                     pickup()
                     break
-
                 elif delivery == 2:
                     print("delivery")
                     break
             else:
                 print("number must be 1 or 2")
-            
         except ValueError:
             print("That is not a valid number")
             print("please enter 1 or 2")
