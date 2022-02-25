@@ -47,10 +47,11 @@ def order_type():
             if delivery >= 1 and delivery <= 2 :
                 if delivery == 1:
                     print("pickup")
-                    pickup()
+                    pickup_info()
                     break
                 elif delivery == 2:
                     print("delivery")
+                    delivery_info()
                     break
             else:
                 print("number must be 1 or 2")
@@ -59,7 +60,18 @@ def order_type():
             print("please enter 1 or 2")
 
 # pick-up up information - name and phone
-def pickup():
+def pickup_info():
+    question = ("Please enter your name ")
+    customer_details['name'] = not_blank(question)
+    print(customer_details['name'])
+
+    question = ("Please enter your phone number ")
+    customer_details['phone'] = not_blank(question)
+    print(customer_details['phone'])
+    print(customer_details)
+
+# delivery information - name address and phone number
+def delivery_info():
     question = ("Please enter your name ")
     customer_details['name'] = not_blank(question)
     print(customer_details['name'])
@@ -68,10 +80,18 @@ def pickup():
     customer_details['phone'] = not_blank(question)
     print(customer_details['phone'])
 
+    question = ("Please enter your house number ")
+    customer_details['house'] = not_blank(question)
+    print(customer_details['house'])
+
+    question = ("Please enter your street name ")
+    customer_details['street'] = not_blank(question)
+    print(customer_details['street'])
+
+    question = ("Please enter your suburb ")
+    customer_details['suburb'] = not_blank(question)
+    print(customer_details['suburb'])
     print(customer_details)
-
-# delivery information - name address and phone number
-
 
 
 # choose total number of pizzas - max 5
