@@ -5,6 +5,7 @@
 
 import random
 from random import randint
+from tkinter import N
 
 # list of random names
 names = ["Mark", "Pheobe", "Sally", "Michael", "Denise", "Ellen", "Eris", "Moana", "Lewis", "Lara"]
