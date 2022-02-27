@@ -10,6 +10,13 @@ from tkinter import N
 # list of random names
 names = ["Mark", "Pheobe", "Sally", "Michael", "Denise", "Ellen", "Eris", "Moana", "Lewis", "Lara"]
 
+# list of pizza names
+pizza_names = ['Margherita','Pepperoni','Hawaiian','Cheese','Italian','Veggie','Vegan','Chicken Deluxe',
+                'Mega Meat Lovers','Seafood Deluxe','Apricot Chicken Deluxe','BBQ Chicken Deluxe]']
+
+# lists of pizza prices
+pizza_prices = [8.50, 8.50, 8.50, 8.50, 8.50, 8.50, 8.50, 13.50, 13.50, 13.50, 13.50, 13.50]
+
 #Cutomer details dictionary
 customer_details = {}
 
@@ -94,12 +101,15 @@ def delivery_info():
     print(customer_details['suburb'])
     print(customer_details)
 
+# pizza menu
+def menu():
+    number_pizzas = 12
+
+    count = 0
+    for count in range (number_pizzas):
+        print("{} {} ${:.2f}" .format(count+1,pizza_names[count],pizza_prices[count]))
 
 # choose total number of pizzas - max 5
-
-
-
-# pizza menu
 
 
 
@@ -128,5 +138,6 @@ def main():
     """
     welcome()
     order_type()
+    menu()
     
 main()
