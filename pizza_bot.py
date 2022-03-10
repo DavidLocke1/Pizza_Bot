@@ -66,6 +66,8 @@ def order_type():
                     break
                 elif delivery == 2:
                     print("delivery")
+                    #order_list.append("Delivery Charge")
+                    #order_cost.append(5)
                     delivery_info()
                     del_pick = "delivery"
                     break
@@ -159,15 +161,16 @@ def order_pizza():
 def print_order(del_pick):
     print()
     total_cost = sum(order_cost)
-    print("Customer Details")
+    print("Your Customer Details")
     if del_pick == "pickup":
         print("Your order is for pickup")
         print(f"Customer Name: {customer_details['name']} \nCustomer Phone: {customer_details['phone']}")
     elif del_pick == "delivery":
-        print("Your order is for delivery")
+        print("Your order is for delivery a $5.00 delivery charge applies")
+        total_cost = total_cost + 5
         print(f"Customer Name: {customer_details['name']} \nCustomer Phone: {customer_details['phone']} \nCustomer Address: {customer_details['house']} {customer_details['street']} {customer_details['suburb']}")
     print()
-    print("Order Details")
+    print("Your Order Details")
     count = 0
     for item in order_list:
         print("Ordered: {} Cost ${:.2f}".format(item, order_cost[count]))
