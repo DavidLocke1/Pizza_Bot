@@ -1,7 +1,7 @@
 from pickle import HIGHEST_PROTOCOL
 
 
-def order_type(low, high, question):
+def val_int(low, high, question):
     while True:
         try:
 
@@ -15,10 +15,10 @@ def order_type(low, high, question):
             print(f"Please enter a number between {low} and {high}")
 
 LOW = 1
-HIGH = 12
+HIGH = 2
 question = (f"Enter a number between {LOW} and {HIGH} ")
 
-answer = order_type(LOW, HIGH, question)
+answer = val_int(LOW, HIGH, question)
 
 print(answer)
 
