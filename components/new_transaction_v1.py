@@ -1,5 +1,12 @@
-from os import kill
+import sys
 
+# list to store ordered pizzas
+order_list =[]
+#list to store pizzas prices
+order_cost =[]
+
+#Cutomer details dictionary
+customer_details = {}
 
 print("Do you want to start anouther order or exit")
 print("To start anouther order please enter 1")
@@ -10,11 +17,15 @@ while True:
         if confirm >= 1 and confirm <= 2 :
             if confirm == 1:
                 print("New order")
+                order_list.clear()
+                order_cost.clear()
+                customer_details.clear()
+                main()
                 break
 
             elif confirm == 2:
                 print("Exit")
-                kill
+                sys.exit()
                 break
         else:
             print("number must be 1 or 2")
@@ -22,3 +33,7 @@ while True:
     except ValueError:
         print("That is not a valid number")
         print("please enter 1 or 2")
+
+
+def main():
+    print("Start again")
